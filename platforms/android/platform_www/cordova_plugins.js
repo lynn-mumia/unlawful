@@ -31,13 +31,46 @@ module.exports = [
     "clobbers": [
       "CameraPopoverHandle"
     ]
+  },
+  {
+    "id": "cordova-plugin-gpslocation.Coordinates",
+    "file": "plugins/cordova-plugin-gpslocation/www/Coordinates.js",
+    "pluginId": "cordova-plugin-gpslocation",
+    "clobbers": [
+      "Coordinates"
+    ]
+  },
+  {
+    "id": "cordova-plugin-gpslocation.PositionError",
+    "file": "plugins/cordova-plugin-gpslocation/www/PositionError.js",
+    "pluginId": "cordova-plugin-gpslocation",
+    "clobbers": [
+      "PositionError"
+    ]
+  },
+  {
+    "id": "cordova-plugin-gpslocation.Position",
+    "file": "plugins/cordova-plugin-gpslocation/www/Position.js",
+    "pluginId": "cordova-plugin-gpslocation",
+    "clobbers": [
+      "Position"
+    ]
+  },
+  {
+    "id": "cordova-plugin-gpslocation.GPSLocation",
+    "file": "plugins/cordova-plugin-gpslocation/www/GPSLocation.js",
+    "pluginId": "cordova-plugin-gpslocation",
+    "clobbers": [
+      "window.GPSLocation"
+    ]
   }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
   "cordova-plugin-whitelist": "1.3.3",
-  "cordova-plugin-camera": "3.0.0"
+  "cordova-plugin-camera": "3.0.0",
+  "cordova-plugin-gpslocation": "1.0.0"
 };
 // BOTTOM OF METADATA
 });

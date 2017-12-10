@@ -35,7 +35,8 @@ module.exports.metadata =
 // TOP OF METADATA
 {
     "cordova-plugin-whitelist": "1.3.3",
-    "cordova-plugin-camera": "3.0.0"
+    "cordova-plugin-camera": "3.0.0",
+    "cordova-plugin-gpslocation": "1.0.0"
 }
 // BOTTOM OF METADATA
 });
