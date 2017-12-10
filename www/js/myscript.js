@@ -109,9 +109,26 @@ function sendSms(){
 	var message= username+ "has been registered successfully to unlawful app";
     var url = 'api.deywuro.com/bulksms/?username=AshesiMoney&password=ashesi@123&type=0&dlr=1&destination='+pnumber+'&source=GHeSecurity&message='+ message;
 
-    /*var initCurl = curl_init(); 
-    var curl_setopt(initCurl,CURLOPT_URL,url);
-    curl_exec(initCurl);*/
+    if (window.XMLHttpRequest) {
+				xhttp = new XMLHttpRequest();
+				} else {
+				// code for IE6, IE5
+				xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			xhttp.onreadystatechange = function() {
+                 //console.log("in the on readyState");
+				if (this.readyState == 4 && this.status == 200) {					
+					if (this.responseText == "successful") {
+						//Parse the Json results from the server and format it to give the name.
+						   // console.log(this.responseText);
+                            } else {
+                            	//console.log(this.responseText);                            	
+                            }
+                          }
+                        };
+		  //Direct it to the page that you want the results to be displayed on
+		  xhttp.open("GET", url, true);		  
+		  xhttp.send();
 }
 
 function registerajax(){
@@ -130,6 +147,7 @@ function registerajax(){
 					if (this.responseText == "successful") {
 						//Parse the Json results from the server and format it to give the name.
                             console.log(this.responseText);
+                            sendSms();
                             window.location.href = "login/index.html";
                         }						
 				}
