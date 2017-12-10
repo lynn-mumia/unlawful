@@ -1,4 +1,5 @@
 var camera;
+var gps;
 
 function takePicture(){
 	navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
@@ -17,7 +18,8 @@ function upload(){
 	var category= document.getElementById('option').value;
 	var description= document.getElementById('description').value;
 	var image = camera;
-	var location= getlocation();
+	getlocation();
+	var location=gps;
 	if (window.XMLHttpRequest) {
 				xhttp = new XMLHttpRequest();
 				} else {
@@ -47,8 +49,7 @@ navigator.geolocation.getCurrentPosition(onSuccess, onError);
 // onSuccess Geolocation
 //
 function onSuccess(position) {
-
-    return position.coords.latitude+","+position.coords.longitude;    
+    gps=position.coords.latitude+","+position.coords.longitude;    
      }
 
 // onError Callback receives a PositionError object
