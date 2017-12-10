@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<meta charset="UTF-8">
+	<title>Unlawfulness Curbing</title>  
+	<link rel="stylesheet" href="../css/loginstyle.css">  
+</head>
+
+<body>
+	<div class="container">
+	    <form id="contact">
+		 <h1>Choose a mode</h1>
+	      <fieldset>
+	        Choose a category of crime
+	         <select>
+			  <option value="Wreckless driving" name="wreckless">Wreckless driving(police)</option>
+			  <option value="Stolen vehicle" name="stolen">Stolen vehicle(license)</option>
+			  <option value="Robbery" name="robbery">Robbery(police)</option>
+			</select> 
+	      </fieldset> 
+		      <fieldset>
+		       Please enter the description 
+		      <textarea type="text" id="description" name="description" rows="4" cols="50">
+	           </textarea> 
+	           </fieldset>
+	           <fieldset>
+	           <input type="image" id="button" style="width:20%;height:20%;" src="../img/camera.png" onclick="takePicture()">
+	           Take a picture
+	           </fieldset>
+		<button type="button" id="button">Upload a picture</button><br><br>
+		<button type="button" id="button" onclick>Attach the location</button><br><br>
+
+		<button name="login" type="button" id="loginSubmit" onclick="upload()">Submit</button>
+		</form>
+	
+	</div>
+    <script type="text/javascript" src="../js/myscript.js"></script>  
+    <script type="text/javascript" src="../js/plugins.js"></script> 
+</body>
+</html>
+
+
