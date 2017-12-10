@@ -77,8 +77,8 @@ function validatelogin(){
 function loginajax(){
 	var usern= document.getElementById('unme').value;
 	var pass= document.getElementById('passwd').value;
-	console.log(usern);
-	console.log(pass);
+	/*console.log(usern);
+	console.log(pass);*/
 
 	if (window.XMLHttpRequest) {
 				xhttp = new XMLHttpRequest();
@@ -87,14 +87,14 @@ function loginajax(){
 				xhttp = new ActiveXObject("Microsoft.XMLHTTP");
 			}
 			xhttp.onreadystatechange = function() {
-                 console.log("in the on readyState");
+                 //console.log("in the on readyState");
 				if (this.readyState == 4 && this.status == 200) {					
 					if (this.responseText == "successful") {
 						//Parse the Json results from the server and format it to give the name.
-						    console.log(this.responseText);
+						   // console.log(this.responseText);
                             window.location.href = "../layout/whistleblower.html";
                             } else {
-                            	console.log(this.responseText);                            	
+                            	//console.log(this.responseText);                            	
                             }
                           }
                         };
@@ -102,7 +102,7 @@ function loginajax(){
 		  xhttp.open("GET", "https://unlawful.000webhostapp.com/login.php?username="+usern+"&passwd="+pass, true);		  
 		  xhttp.send();
 		}
-		
+
 function sendSms(){
 	var username = document.getElementById("unme");
 	var pnumber = document.getElementById("pnm");
@@ -113,11 +113,6 @@ function sendSms(){
     var curl_setopt(initCurl,CURLOPT_URL,url);
     curl_exec(initCurl);*/
 }
-
-
-
-
-
 
 function registerajax(){
 	var usern= document.getElementById('unme').value;
